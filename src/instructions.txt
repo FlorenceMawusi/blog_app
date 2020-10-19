@@ -1,0 +1,14 @@
+PreMEST Assignment 3
+Build a personal blog using react. The app must include:
+A home page (with 4 articles) done
+A login/sign in feature for yourself. Only after logging in can you add a new blog post
+A visitor to your site should be able to 
+Upvote/downvote a post done
+Add an anonymous comment to each post done
+Use react-router-dom to handle routing of your react app 
+USE REACT CONTEXT TO ADD DARK THEME/LIGHT THEME TO YOUT BLOG
+Style your app with CSS
+Commit your code regularly to git as you build your app (Create a new repo for this assignment (use commits and branches as you did in the previous assignment)
+Deploy your app to a cloud provider (Eg: Netlify, AWS Amplify, Heroku, etc)
+Submit your completed project to this form: https://forms.gle/YpY4Yj6BxoBBRxCq6
+Due on Wednesday at 9am (edited) 
