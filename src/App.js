@@ -123,7 +123,7 @@ function App() {
             setIsLoggedIn={setIsLoggedIn}
           />
           <Login path="/Login" users={users} setIsLoggedIn={setIsLoggedIn} />
-          <DisplayAllPosts path="/" changeThemeHandler={changeThemeHandler} />
+          <DisplayAllPosts path="/" changeThemeHandler={changeThemeHandler} isloggedIn = {isloggedIn}/>
           <Post path="/post/:id" />
         </Router>
         <footer className="footer"></footer>

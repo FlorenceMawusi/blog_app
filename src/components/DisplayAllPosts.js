@@ -3,7 +3,7 @@ import CreateNewPost from "./CreateNewPost";
 import Blogs from "./Blogs.js";
 import Card from "./Card.js";
 
-const DisplayAllPosts = ({ changeThemeHandler, }) => {
+const DisplayAllPosts = ({ changeThemeHandler, isloggedIn }) => {
   const getTitle = useRef();
   const getContent = useRef();
 
@@ -23,9 +23,9 @@ const DisplayAllPosts = ({ changeThemeHandler, }) => {
 
   const savePost = (event) => {
     event.preventDefault();
-    const id = String(allPosts.length +1);
+    const id = String(allPosts.length + 1);
     const img = "EI1.png";
-    setAllPosts([...allPosts, { title, content, id, img}]);
+    setAllPosts([...allPosts, { title, content, id, img }]);
     getTitle.current.value = "";
     getContent.current.value = "";
     setIsCreateNewPost(false);
@@ -51,14 +51,16 @@ const DisplayAllPosts = ({ changeThemeHandler, }) => {
               Back
             </button>
           ) : (
-            <button
-              className="btn btn-secondary float-right"
-              onClick={() => {
-                setIsCreateNewPost(true);
-              }}
-            >
-              Create New
-            </button>
+            isloggedIn === true && (
+              <button
+                className="btn btn-secondary float-right"
+                onClick={() => {
+                  setIsCreateNewPost(true);
+                }}
+              >
+                Create New
+              </button>
+            )
           )}
         </div>
       </div>
@@ -83,14 +85,12 @@ const DisplayAllPosts = ({ changeThemeHandler, }) => {
                   id={eachPost.id}
                   key={eachPost.id}
                   title={eachPost.title}
-                  img = {eachPost.img}
+                  img={eachPost.img}
                   content={eachPost.content.substring(0, 100)}
-                  allPosts = {allPosts}
+                  allPosts={allPosts}
                 />
               );
             })}
-
-
         </div>
       </div>
     </div>
