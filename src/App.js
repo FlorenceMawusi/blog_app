@@ -126,7 +126,6 @@ function App() {
           <DisplayAllPosts path="/" changeThemeHandler={changeThemeHandler} isloggedIn = {isloggedIn}/>
           <Post path="/post/:id" />
         </Router>
-        <footer className="footer"></footer>
       </div>
     </ThemeContext.Provider>
   );
