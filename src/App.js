@@ -36,11 +36,14 @@ function App() {
     username: "password",
     Florence: "ofori",
   });
+
+
+  
   const [style, setStyle] = useState({
     background: theme.light.background,
     foreground: theme.light.foreground,
   });
-  const [color, setColor] = useState("dark");
+  const [color, setColor] = useState("light");
 
   const changeThemeHandler = () => {
     if (color === "light") {
